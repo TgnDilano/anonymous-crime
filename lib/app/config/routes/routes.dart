@@ -4,14 +4,24 @@ enum AppRoutes {
     path: "/loginPage",
   ),
 
-  homenPage(
-    name: "homePage",
-    path: "/homePage",
-  ),
-
   messagePage(
     name: "messagePage",
     path: "/messagePage",
+  ),
+
+  dashboardPage(
+    name: "Dashboard",
+    path: "/dashboard-Page",
+  ),
+
+  reportCase(
+    name: "Report Case",
+    path: "/reportCase-Page",
+  ),
+
+  messages(
+    name: "Messages",
+    path: "/messages-Page",
   ),
 
   uploadObjectiveFiles(

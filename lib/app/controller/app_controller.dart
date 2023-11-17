@@ -11,10 +11,10 @@ class AppController extends GetxController {
   Future<void> init() async {
     await dotenv.load(fileName: ".env");
     await storageServices.initPrefs();
+    isLoggedIn.value = storageServices.isLoggedIn;
   }
 
   final storageServices = LocalStoregeServices();
-
   final appLocale = const Locale("fr").vn;
 
   final isLoggedIn = false.vn;

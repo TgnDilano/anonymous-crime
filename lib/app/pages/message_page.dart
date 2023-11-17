@@ -49,8 +49,8 @@ class _MessagePageState extends State<MessagePage> {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
                 child: SizedBox(
-                  width: 120,
-                  height: 120,
+                  width: 60,
+                  height: 60,
                   child: CircularProgressIndicator(
                     color: AppColors.kPrimary,
                   ),
