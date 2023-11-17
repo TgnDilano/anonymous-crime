@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:macos_ui_app/app/constants/colors.dart';
+import 'package:macos_ui_app/app/widget/inputs/button.dart';
 import 'package:macos_ui_app/app/widget/inputs/input_field.dart';
 
 class LoginPage extends StatefulWidget {
@@ -55,26 +56,14 @@ class _LoginPageState extends State<LoginPage> {
                   isPwd: true,
                   onChange: (str) {},
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                  height: 45,
-                  child: ElevatedButton(
-                    onPressed: ()=>{},
-                    style: ElevatedButton.styleFrom(
-                      primary: AppColors.kPrimary,
-                      onPrimary: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                    ),
-                    child: const Text('Login'),
-                  ),
+                NButton(
+                  text: "login",
+                  onTap: ()=>{},
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Column(
@@ -84,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                       "Don't have an account?",
                       style: TextStyle(fontSize: 13),
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushNamed('');
