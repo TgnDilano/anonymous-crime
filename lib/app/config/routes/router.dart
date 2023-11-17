@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:macos_ui_app/app/config/routes/routes.dart';
 import 'package:macos_ui_app/app/controller/app_controller.dart';
+import 'package:macos_ui_app/app/pages/login_page.dart';
 
 typedef MapOfString = Map<String, dynamic>;
 
@@ -33,6 +34,12 @@ class AppRouter {
 
       return null;
     },
-    routes: [],
+    routes: [
+      GoRoute(
+        path: AppRoutes.loginPage.path,
+        name: AppRoutes.loginPage.name,
+        builder: (state, context) => const LoginPage(),
+      ),
+    ],
   );
 }

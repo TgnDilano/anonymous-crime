@@ -389,10 +389,10 @@
       "name": "macos_ui_app",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-11-17T09:34:44.874120Z",
+  "generated": "2023-11-17T09:41:57.148731Z",
   "generator": "pub",
   "generatorVersion": "3.1.3"
 }
