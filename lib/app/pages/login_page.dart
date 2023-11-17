@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:macos_ui_app/app/config/routes/routes.dart';
 import 'package:macos_ui_app/app/widget/inputs/input_field.dart';
 
 class LoginPage extends StatelessWidget {
@@ -15,8 +17,11 @@ class LoginPage extends StatelessWidget {
               NInputField(
                 onChange: (str) {},
               ),
+              Image.asset("assets/images/logo.png"),
               NInputField(
-                onChange: (str) {},
+                onChange: (str) {
+                  context.pushNamed(AppRoutes.loginPage.name);
+                },
               ),
             ],
           ),

@@ -62,6 +62,24 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "firebase_core",
+      "rootUri": "file:///Users/tagnidilane/.pub-cache/hosted/pub.dev/firebase_core-2.22.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_core_platform_interface",
+      "rootUri": "file:///Users/tagnidilane/.pub-cache/hosted/pub.dev/firebase_core_platform_interface-5.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_core_web",
+      "rootUri": "file:///Users/tagnidilane/.pub-cache/hosted/pub.dev/firebase_core_web-2.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/tagnidilane/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -392,7 +410,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-11-17T09:41:57.148731Z",
+  "generated": "2023-11-17T10:13:39.660572Z",
   "generator": "pub",
   "generatorVersion": "3.1.3"
 }

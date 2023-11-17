@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "795917205827",
+    "project_id": "code-battle-8f4b3",
+    "storage_bucket": "code-battle-8f4b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795917205827:android:9ba35856a02074f4926ff6",
+        "android_client_info": {
+          "package_name": "com.example.macos_ui_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCST1y2Tqe9eO-2M9OR7-a1IMupoZO2Z9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
