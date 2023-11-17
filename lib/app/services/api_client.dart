@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:anonymous/app/controller/app_controller.dart';
-import 'package:anonymous/app/util/url_simplifier.dart';
-import 'package:http/http.dart' as http;
-import 'package:anonymous/app/model/api_response_model.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
+import 'package:macos_ui_app/app/controller/app_controller.dart';
+import 'package:macos_ui_app/app/model/api_response_model.dart';
+import 'package:macos_ui_app/app/util/url_simplifier.dart';
 
 class ApiClient {
   static var kBaseUrl = dotenv.env['APP_API_URLdemo'] ?? '';

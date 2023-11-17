@@ -1,6 +1,6 @@
-import 'package:anonymous/app/extensions/number_ext.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:macos_ui_app/app/extensions/number_ext.dart';
 
 class AppController extends GetxController {
   static AppController get find => Get.find<AppController>();

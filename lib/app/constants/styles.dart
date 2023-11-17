@@ -1,6 +1,6 @@
-import 'package:anonymous/app/constants/colors.dart';
-import 'package:anonymous/app/extensions/context_ext.dart';
 import 'package:flutter/material.dart';
+import 'package:macos_ui_app/app/constants/colors.dart';
+import 'package:macos_ui_app/app/extensions/context_ext.dart';
 
 const kPadding = 16.0;
 
@@ -20,7 +20,7 @@ InputDecoration getInputDecoration(BuildContext context) {
     ),
     errorStyle: const TextStyle(
       color: Colors.red,
-    fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w400,
       fontSize: 12,
     ),
     border: OutlineInputBorder(

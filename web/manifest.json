@@ -1,6 +1,6 @@
 {
-    "name": "anonymous",
-    "short_name": "anonymous",
+    "name": "macos_ui_app",
+    "short_name": "macos_ui_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

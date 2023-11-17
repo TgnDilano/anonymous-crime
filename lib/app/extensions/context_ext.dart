@@ -1,5 +1,5 @@
-import 'package:anonymous/app/constants/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:macos_ui_app/app/constants/styles.dart';
 
 extension ContextExtension on BuildContext {
   toScreen(Widget screen) async {
