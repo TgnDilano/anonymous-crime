@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:macos_ui_app/app/config/routes/routes.dart';
 import 'package:macos_ui_app/app/constants/colors.dart';
+import 'package:macos_ui_app/app/widget/inputs/button.dart';
 import 'package:macos_ui_app/app/widget/inputs/input_field.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     TextEditingController _nameController = TextEditingController();
     TextEditingController _passwordCodeController = TextEditingController();
+    TextEditingController _cpasswordCodeController = TextEditingController();
 
     void loginUser() {
       print(_nameController.text);
@@ -16,10 +20,13 @@ class LoginPage extends StatelessWidget {
     }
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Register To  STEALTH"),
+      ),
       body: Center(
         child: SingleChildScrollView(
           child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
                 const Row(
@@ -28,16 +35,18 @@ class LoginPage extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Welcome Back", style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold
+                        Text(
+                          "STEALTH",
+                          style: TextStyle(
+                              fontSize: 22, fontWeight: FontWeight.bold),
                         ),
+                        SizedBox(
+                          height: 5,
                         ),
-                        SizedBox(height: 5,),
-                        Text("Welcome to stealth. your security is our priority", style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.normal
-                        ),
+                        Text(
+                          "Welcome to stealth. Your security is our priority",
+                          style: TextStyle(
+                              fontSize: 13, fontWeight: FontWeight.normal),
                         ),
                       ],
                     )
@@ -52,36 +61,27 @@ class LoginPage extends StatelessWidget {
                 ),
                 NInputField(
                   controller: _nameController,
-                  hintText: 'Email',
+                  hintText: 'Passoword',
+                  isPwd: true,
                   onChange: (str) {
                     // _nameController.value = str;
                   },
                 ),
                 NInputField(
-                  hintText: 'Passoword',
+                  hintText: 'Confirm Passoword',
                   isPwd: true,
-                  controller: _passwordCodeController,
+                  controller: _cpasswordCodeController,
                   onChange: (str) {},
                 ),
-                SizedBox(height: 20,),
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                  height: 45,
-                  child: ElevatedButton(
-                    onPressed: loginUser,
-                    style: ElevatedButton.styleFrom(
-                      primary: AppColors.kPrimary,
-                      onPrimary: Colors.white,
-
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                    ),
-                    child: Text('Login'),
-                  ),
+                const SizedBox(
+                  height: 20,
                 ),
-                SizedBox(height: 10,),
+                const NButton(
+                  text: "Login",
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -89,10 +89,10 @@ class LoginPage extends StatelessWidget {
                       "Already have an account?",
                       style: TextStyle(fontSize: 13),
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).pushNamed('');
+                        context.pushNamed(AppRoutes.loginPage.name);
                       },
                       child: const Text(
                         'Login',

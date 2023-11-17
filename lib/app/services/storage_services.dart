@@ -8,6 +8,7 @@ class LocalStoregeServices {
 
   Future<SharedPreferences> initPrefs() async {
     _prefs = await SharedPreferences.getInstance();
+    await _prefs.clear();
     return _prefs;
   }
 

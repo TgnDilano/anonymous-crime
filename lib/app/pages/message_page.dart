@@ -30,6 +30,7 @@ class _MessagePageState extends State<MessagePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Message Screen"),
+        leading: const SizedBox(),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: kPadding),
@@ -46,8 +47,7 @@ class _MessagePageState extends State<MessagePage> {
               );
             }
 
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(
+            return const Center(
                 child: SizedBox(
                   width: 60,
                   height: 60,
@@ -56,12 +56,6 @@ class _MessagePageState extends State<MessagePage> {
                   ),
                 ),
               );
-            }
-
-            if (snapshot.hasData) {
-            } else {}
-
-            return Container();
           },
         ),
       ),

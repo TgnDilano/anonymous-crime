@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
+import 'package:macos_ui_app/app/config/routes/router.dart';
 import 'package:macos_ui_app/app/config/routes/routes.dart';
+import 'package:macos_ui_app/app/constants/colors.dart';
 
 class NavItem {
   final String routeName;
+  final String routePath;
   final IconData iconData;
 
-  NavItem({required this.routeName, required this.iconData});
+  NavItem(
+      {required this.routeName,
+      required this.iconData,
+      required this.routePath});
 }
 
 class BottomNavBar extends StatefulWidget {
@@ -19,10 +25,29 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   final navbarData = [
-    NavItem(routeName: AppRoutes.dashboardPage.name, iconData: Icons.dashboard),
-    NavItem(routeName: AppRoutes.reportCase.name, iconData: Icons.add),
-    NavItem(routeName: AppRoutes.messagePage.name, iconData: Icons.message),
+    NavItem(
+      routeName: AppRoutes.reportCase.name,
+      iconData: Icons.add,
+      routePath: AppRoutes.reportCase.name,
+    ),
+    NavItem(
+      routeName: AppRoutes.dashboardPage.name,
+      iconData: Icons.dashboard,
+      routePath: AppRoutes.reportCase.name,
+    ),
+    NavItem(
+      routeName: AppRoutes.messagePage.name,
+      iconData: Icons.message,
+      routePath: AppRoutes.reportCase.name,
+    ),
   ];
+
+  Color _getColor(NavItem item, BuildContext context) {
+    if (AppRouter.router.location == item.routePath) {
+      return AppColors.kPrimary;
+    }
+    return context.isDarkMode ? Colors.white24 : Colors.black;
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -4,6 +4,11 @@ enum AppRoutes {
     path: "/loginPage",
   ),
 
+  registerPage(
+    name: "registerPage",
+    path: "/registerPage",
+  ),
+
   messagePage(
     name: "messagePage",
     path: "/messagePage",

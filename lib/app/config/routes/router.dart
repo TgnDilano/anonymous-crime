@@ -7,6 +7,7 @@ import 'package:macos_ui_app/app/pages/dashboard.dart';
 import 'package:macos_ui_app/app/pages/home_page.dart';
 import 'package:macos_ui_app/app/pages/login_page.dart';
 import 'package:macos_ui_app/app/pages/message_page.dart';
+import 'package:macos_ui_app/app/pages/register_page.dart';
 import 'package:macos_ui_app/app/pages/report_case.dart';
 
 typedef MapOfString = Map<String, dynamic>;
@@ -26,6 +27,10 @@ class AppRouter {
     redirect: (context, state) {
       final bool onloginPage = state.location == AppRoutes.loginPage.path;
       final bool userAutheticated = AppController.find.isLoggedIn.value;
+
+      if(state.location == AppRoutes.registerPage.path){
+        return AppRoutes.loginPage.path;
+      }
 
       if (!userAutheticated) {
         return AppRoutes.loginPage.path;
@@ -65,6 +70,11 @@ class AppRouter {
         path: AppRoutes.loginPage.path,
         name: AppRoutes.loginPage.name,
         builder: (state, context) => const LoginPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.registerPage.path,
+        name: AppRoutes.registerPage.name,
+        builder: (state, context) => const RegisterPage(),
       ),
     ],
   );

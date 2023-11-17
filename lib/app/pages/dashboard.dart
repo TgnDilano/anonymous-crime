@@ -8,6 +8,7 @@ class DashboardPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Dashboard"),
+        leading: const SizedBox(),
       ),
     );
   }

@@ -13,6 +13,7 @@ class ReportCase extends StatefulWidget {
 class _ReportCaseState extends State<ReportCase> {
   var data = {};
   final isLoadin = false.vn;
+  String dropdownValue = 'Corruption';
 
   loginUser() {}
 
@@ -72,7 +73,7 @@ class _ReportCaseState extends State<ReportCase> {
                 18.height,
                 NInputField(
                   title: "Date",
-                  hintText: 'Description',
+                  hintText: 'date',
                   onChange: (str) {
                     data = {
                       ...data,
@@ -81,12 +82,59 @@ class _ReportCaseState extends State<ReportCase> {
                   },
                 ),
                 18.height,
-                const SizedBox(height: 20),
+                SizedBox(
+                  width: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("Slect crime Type"),
+                      12.height,
+                      SizedBox(
+                        width: double.infinity,
+                        child: DropdownButton<String>(
+                          isExpanded: true,
+                          value: dropdownValue,
+                          items: <String>[
+                            'Theft',
+                            'Murder',
+                            'Corruption',
+                            'Homiecide'
+                          ].map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(
+                                value,
+                                style: const TextStyle(fontSize: 14),
+                              ),
+                            );
+                          }).toList(),
+                          onChanged: (String? newValue) {
+                            setState(() {
+                              dropdownValue = newValue!;
+                            });
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                18.height,
+                NInputField(
+                  title: "Time",
+                  hintText: 'Time',
+                  onChange: (str) {
+                    data = {
+                      ...data,
+                      "name": str,
+                    };
+                  },
+                ),
+                18.height,
                 ValueListenableBuilder(
                   valueListenable: isLoadin,
                   builder: (context, value, _) {
                     return NButton(
-                      text: "login",
+                      text: "Submit Case",
                       onTap: loginUser,
                       isLoading: value,
                     );
