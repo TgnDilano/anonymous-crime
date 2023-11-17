@@ -25,22 +25,24 @@ class LoginPage extends StatelessWidget {
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                   Column(
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                     children: [
-                        Text("Welcome Back", style: TextStyle(
-                           fontSize: 22,
-                           fontWeight: FontWeight.bold
-                       ),
-                       ),
-                        SizedBox(height: 5,),
-                        Text("Welcome to stealth. your security is our priority", style: TextStyle(
-                           fontSize: 13,
-                           fontWeight: FontWeight.normal
-                       ),
-                       ),
-                     ],
-                   )
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Welcome Back",
+                          style: TextStyle(
+                              fontSize: 22, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "Welcome to stealth. your security is our priority",
+                          style: TextStyle(
+                              fontSize: 13, fontWeight: FontWeight.normal),
+                        ),
+                      ],
+                    )
                   ],
                 ),
                 NInputField(
@@ -56,7 +58,9 @@ class LoginPage extends StatelessWidget {
                   controller: _passwordCodeController,
                   onChange: (str) {},
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -66,7 +70,6 @@ class LoginPage extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: AppColors.kPrimary,
                       onPrimary: Colors.white,
-
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(6),
                       ),
@@ -74,7 +77,9 @@ class LoginPage extends StatelessWidget {
                     child: Text('Login'),
                   ),
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
