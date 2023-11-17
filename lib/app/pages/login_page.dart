@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:macos_ui_app/app/constants/colors.dart';
+import 'package:macos_ui_app/app/extensions/number_ext.dart';
 import 'package:macos_ui_app/app/widget/inputs/button.dart';
 import 'package:macos_ui_app/app/widget/inputs/input_field.dart';
 
@@ -12,6 +13,13 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   var data = {};
+  final isLoadin = false.vn;
+
+  loginUser(){
+    isLoadin.value = true;
+    print(data);
+    isLoadin.value = false;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +39,9 @@ class _LoginPageState extends State<LoginPage> {
                         Text(
                           "Welcome Back",
                           style: TextStyle(
-                              fontSize: 22, fontWeight: FontWeight.bold),
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         SizedBox(
                           height: 5,
@@ -48,20 +58,32 @@ class _LoginPageState extends State<LoginPage> {
                 NInputField(
                   hintText: 'Name',
                   onChange: (str) {
-                    // _nameController.value = str;
+                    data = {
+                      ...data,
+                      "name": str,
+                    };
                   },
                 ),
                 NInputField(
                   hintText: 'Passoword',
                   isPwd: true,
-                  onChange: (str) {},
+                  onChange: (str) {
+                    data = {
+                      ...data,
+                      "password": str,
+                    };
+                  },
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                NButton(
-                  text: "login",
-                  onTap: ()=>{},
+                const SizedBox(height: 20),
+                ValueListenableBuilder(
+                  valueListenable: isLoadin,
+                  builder: (context, value, _) {
+                    return NButton(
+                      text: "login",
+                      onTap: loginUser,
+                      isLoading: value,
+                    );
+                  },
                 ),
                 const SizedBox(
                   height: 10,

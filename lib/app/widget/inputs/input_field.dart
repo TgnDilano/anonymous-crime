@@ -56,12 +56,12 @@ class _NInputFieldState extends State<NInputField> {
         ? const SizedBox.shrink()
         : IconButton(
             icon: showPassword.value
-                ? const Icon(
-                    Icons.cabin,
+                ?  const Icon(
+                    Icons.password,
                     color: AppColors.kSecondary,
                   )
                 : const Icon(
-                    Icons.tab,
+                    Icons.abc,
                     color: AppColors.kSecondary,
                   ),
             onPressed: () {

@@ -8,7 +8,8 @@ import 'package:macos_ui_app/app/model/api_response_model.dart';
 import 'package:macos_ui_app/app/util/url_simplifier.dart';
 
 class ApiClient {
-  static var kBaseUrl = dotenv.env['APP_API_URLdemo'] ?? '';
+  static var kBaseUrltest = dotenv.env['APP_API_URLdemo'] ?? '';
+  static var kBaseUrl = 'http://169.254.253.37';
 
   static Future<ApiResponseModel> post(
     String url, {
