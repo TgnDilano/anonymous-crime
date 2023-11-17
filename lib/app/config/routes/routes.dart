@@ -9,6 +9,11 @@ enum AppRoutes {
     path: "/homePage",
   ),
 
+  messagePage(
+    name: "messagePage",
+    path: "/messagePage",
+  ),
+
   uploadObjectiveFiles(
     name: "uploadObjectiveFiles",
     path: "upload-Objective-Files",

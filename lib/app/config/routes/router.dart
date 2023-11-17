@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:macos_ui_app/app/config/routes/routes.dart';
 import 'package:macos_ui_app/app/controller/app_controller.dart';
 import 'package:macos_ui_app/app/pages/login_page.dart';
+import 'package:macos_ui_app/app/pages/message_page.dart';
 
 typedef MapOfString = Map<String, dynamic>;
 
@@ -39,6 +40,11 @@ class AppRouter {
         path: AppRoutes.loginPage.path,
         name: AppRoutes.loginPage.name,
         builder: (state, context) => const LoginPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.messagePage.path,
+        name: AppRoutes.messagePage.name,
+        builder: (state, context) => const MessagePage(),
       ),
     ],
   );
