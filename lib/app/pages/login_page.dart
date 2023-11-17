@@ -2,24 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:macos_ui_app/app/constants/colors.dart';
 import 'package:macos_ui_app/app/widget/inputs/input_field.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
   @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  var data = {};
+
+  @override
   Widget build(BuildContext context) {
-    TextEditingController _nameController = TextEditingController();
-    TextEditingController _passwordCodeController = TextEditingController();
-
-    void loginUser() {
-      print(_nameController.text);
-      print(_passwordCodeController.text);
-    }
-
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
           child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
                 const Row(
@@ -46,7 +45,6 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
                 NInputField(
-                  controller: _nameController,
                   hintText: 'Name',
                   onChange: (str) {
                     // _nameController.value = str;
@@ -55,7 +53,6 @@ class LoginPage extends StatelessWidget {
                 NInputField(
                   hintText: 'Passoword',
                   isPwd: true,
-                  controller: _passwordCodeController,
                   onChange: (str) {},
                 ),
                 SizedBox(
@@ -66,7 +63,7 @@ class LoginPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 24.0),
                   height: 45,
                   child: ElevatedButton(
-                    onPressed: loginUser,
+                    onPressed: ()=>{},
                     style: ElevatedButton.styleFrom(
                       primary: AppColors.kPrimary,
                       onPrimary: Colors.white,
@@ -74,7 +71,7 @@ class LoginPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(6),
                       ),
                     ),
-                    child: Text('Login'),
+                    child: const Text('Login'),
                   ),
                 ),
                 SizedBox(
