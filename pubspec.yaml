@@ -12,11 +12,13 @@ dependencies:
   get: ^4.6.6
   flutter_svg: ^2.0.4
   flutter_animate: ^4.1.1+1
+  go_router: ^7.1.1
   intl: ^0.18.0
   http: ^0.13.5
   flutter_dotenv: ^5.0.2
   flutter_vector_icons: ^2.0.0
   intl_phone_number_input: ^0.7.3+1
+  shared_preferences: ^2.2.0
 
 dev_dependencies:
   flutter_test:
